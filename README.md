@@ -46,7 +46,7 @@ No additional software or dependencies required
 
 Clone the repository:
 
-bashgit clone https://github.com/yourusername/planet-selling-ecommerce.git
+bashgit clone  https://github.com/PrashuVishwakarma/E-Commerce-Planets-Selling.git
 
 Navigate to the project folder:
 
