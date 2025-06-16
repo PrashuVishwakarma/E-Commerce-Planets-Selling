@@ -60,4 +60,14 @@ python -m http.server 8000
 # or
 npx serve .
 
-Visit http://localhost:8000 in your browser
+Visit https://prashuvishwakarma.github.io/E-Commerce-Planets-Selling/ in your browser
+
+# 🙏 Acknowledgments
+
+Built with AI assistance for faster development
+Inspired by modern e-commerce design patterns
+Planet data based on real exoplanet discoveries
+Icons and emojis from Unicode standard
+
+# 📧 Contact
+Your Name - @prashuvishwakarma - prashuvish100@gmail.com
