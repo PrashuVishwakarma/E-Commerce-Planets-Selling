@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmicMart - Premium Planets for Sale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <div class="logo-icon">🪐</div>
+                <span>CosmicMart</span>
+            </div>
+            <ul class="nav-links">
+                <li><a onclick="showSection('home')">Home</a></li>
+                <li><a onclick="showSection('planets')">Buy Now</a></li>
+                <li><a onclick="showSection('details')">Planet Details</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1 class="floating">Own Your Own Planet</h1>
+                <p>Discover and purchase premium planets from across the galaxy. Your cosmic adventure starts here</p>
+                <button class="cta-button" onclick="showSection('planets')">Explore Planets</button>
+            </div>
+        </section>
+
+        <!-- Buy Now Section -->
+        <section id="planets" class="section">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Premium Planets Collection</h2>
+            <div class="planet-grid" id="planetGrid">
+                <!-- Planets will be loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Planet Details Section -->
+        <section id="details" class="section">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Planet Specifications</h2>
+            <div id="planetDetailsContainer">
+                <!-- Planet details will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Purchase Modal -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Purchase Planet</h2>
+            <div id="modalContent">
+                <p>Congratulations on your cosmic purchase!</p>
+                <p>Planet: <span id="modalPlanetName"></span></p>
+                <p>Price: <span id="modalPlanetPrice"></span></p>
+                <p>Thank you for choosing CosmicMart. Your planet ownership documents will be delivered via quantum mail.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
