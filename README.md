@@ -55,12 +55,6 @@ bashcd planet-selling-ecommerce
 Open index.html in your web browser:
 
 bash# Option 1: Double-click the file
-# Option 2: Use a local server (recommended)
-python -m http.server 8000
-# or
-npx serve .
-
-Visit https://prashuvishwakarma.github.io/E-Commerce-Planets-Selling/ in your browser
 
 # 🙏 Acknowledgments
 
