@@ -7,57 +7,249 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+     <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <div class="logo">
-                <div class="logo-icon">🪐</div>
-                <span>CosmicMart</span>
-            </div>
-            <ul class="nav-links">
-                <li><a onclick="showSection('home')">Home</a></li>
-                <li><a onclick="showSection('planets')">Buy Now</a></li>
-                <li><a onclick="showSection('details')">Planet Details</a></li>
+        <nav class="nav-container">
+            <a href="#" class="logo" onclick="showSection('home')">CosmicMart</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" onclick="showSection('home')">Home</a></li>
+                <li class="nav-item"><a href="#" onclick="showSection('planets')">Planets</a></li>
+                <li class="nav-item"><a href="#" onclick="showSection('about')">About</a></li>
+                <li class="nav-item"><a href="#" onclick="showSection('contact')">Contact</a></li>
             </ul>
+            <div class="cart-icon" onclick="showSection('cart')">
+                🛒
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
         </nav>
     </header>
 
-    <main class="main-content">
-        <!-- Home Section -->
-        <section id="home" class="section active">
-            <div class="hero">
-                <h1 class="floating">Own Your Own Planet</h1>
-                <p>Discover and purchase premium planets from across the galaxy. Your cosmic adventure starts here</p>
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Own Your Own Planet</h1>
+                <p>Discover the most exclusive collection of planets in the galaxy. From gas giants to rocky worlds, find your perfect celestial home in our premium planetary marketplace.</p>
                 <button class="cta-button" onclick="showSection('planets')">Explore Planets</button>
             </div>
-        </section>
+        </div>
 
-        <!-- Buy Now Section -->
-        <section id="planets" class="section">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Premium Planets Collection</h2>
-            <div class="planet-grid" id="planetGrid">
-                <!-- Planets will be loaded here by JavaScript -->
+        <div class="features">
+            <div class="features-container">
+                <h2>Why Choose CosmicMart?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌟</div>
+                        <h3>Premium Quality</h3>
+                        <p>Every planet in our collection is carefully selected for its unique characteristics and potential for life or development.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Fast Delivery</h3>
+                        <p>Quantum teleportation technology ensures your planet arrives at your desired location within 24 hours.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Lifetime Warranty</h3>
+                        <p>All planets come with a comprehensive warranty covering atmospheric stability and orbital mechanics.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💎</div>
+                        <h3>Exclusive Collection</h3>
+                        <p>Access to rare and unique planets not available anywhere else in the galaxy.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Eco-Friendly</h3>
+                        <p>All our planets are sustainably sourced and environmentally conscious.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Expert Support</h3>
+                        <p>Our team of planetary scientists provides 24/7 support for all your cosmic needs.</p>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Planet Details Section -->
-        <section id="details" class="section">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Planet Specifications</h2>
-            <div id="planetDetailsContainer">
-                <!-- Planet details will be loaded here -->
+    <!-- Planets Section -->
+    <section id="planets" class="section planets">
+        <div class="planets-container">
+            <h2>Our Planetary Collection</h2>
+            <div class="planets-grid">
+                <div class="planet-card">
+                    <div class="planet-image" style="background: linear-gradient(45deg, #667eea, #764ba2);">🪐</div>
+                    <div class="planet-info">
+                        <div class="planet-name">Kepler-442b</div>
+                        <div class="planet-price">$2.5 Billion</div>
+                        <div class="planet-description">A super-Earth exoplanet with perfect conditions for life. Features beautiful blue oceans and lush green continents.</div>
+                        <button class="buy-button" onclick="addToCart('Kepler-442b', 2500000000, '🪐')">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="planet-card">
+                    <div class="planet-image" style="background: linear-gradient(45deg, #f093fb, #f5576c);">🔴</div>
+                    <div class="planet-info">
+                        <div class="planet-name">Mars Deluxe</div>
+                        <div class="planet-price">$890 Million</div>
+                        <div class="planet-description">The red planet with premium terraforming package included. Ready for immediate colonization.</div>
+                        <button class="buy-button" onclick="addToCart('Mars Deluxe', 890000000, '🔴')">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="planet-card">
+                    <div class="planet-image" style="background: linear-gradient(45deg, #4facfe, #00f2fe);">💙</div>
+                    <div class="planet-info">
+                        <div class="planet-name">Proxima Centauri b</div>
+                        <div class="planet-price">$3.2 Billion</div>
+                        <div class="planet-description">Closest exoplanet to Earth with habitable zone location. Features stunning aurora displays.</div>
+                        <button class="buy-button" onclick="addToCart('Proxima Centauri b', 3200000000, '💙')">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="planet-card">
+                    <div class="planet-image" style="background: linear-gradient(45deg, #fa709a, #fee140);">🟡</div>
+                    <div class="planet-info">
+                        <div class="planet-name">HD 40307g</div>
+                        <div class="planet-price">$1.8 Billion</div>
+                        <div class="planet-description">A golden world with rich mineral deposits and perfect atmospheric conditions for human habitation.</div>
+                        <button class="buy-button" onclick="addToCart('HD 40307g', 1800000000, '🟡')">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="planet-card">
+                    <div class="planet-image" style="background: linear-gradient(45deg, #a8edea, #fed6e3);">🟢</div>
+                    <div class="planet-info">
+                        <div class="planet-name">Gliese 667Cc</div>
+                        <div class="planet-price">$4.1 Billion</div>
+                        <div class="planet-description">A tropical paradise with three suns and exotic wildlife. Perfect for luxury space tourism.</div>
+                        <button class="buy-button" onclick="addToCart('Gliese 667Cc', 4100000000, '🟢')">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="planet-card">
+                    <div class="planet-image" style="background: linear-gradient(45deg, #ff9a9e, #fecfef);">🟣</div>
+                    <div class="planet-info">
+                        <div class="planet-name">TOI-715 b</div>
+                        <div class="planet-price">$2.9 Billion</div>
+                        <div class="planet-description">A mysterious purple planet with crystalline formations and unique gravitational properties.</div>
+                        <button class="buy-button" onclick="addToCart('TOI-715 b', 2900000000, '🟣')">Add to Cart</button>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Purchase Modal -->
-    <div id="purchaseModal" class="modal">
+    <!-- Cart Section -->
+    <section id="cart" class="section cart">
+        <div class="cart-container">
+            <h2>Your Planetary Cart</h2>
+            <div id="cart-content">
+                <div class="empty-cart">
+                    <h3>Your cart is empty</h3>
+                    <p>Add some planets to get started!</p>
+                    <button class="cta-button" onclick="showSection('planets')" style="margin-top: 1rem;">Browse Planets</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div style="padding: 5rem 0; max-width: 1000px; margin: 0 auto; padding-left: 2rem; padding-right: 2rem;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #00d4ff;">About CosmicMart</h2>
+            <div style="background: rgba(255, 255, 255, 0.1); padding: 3rem; border-radius: 20px; line-height: 1.8;">
+                <p style="margin-bottom: 2rem; font-size: 1.2rem;">Welcome to CosmicMart, the galaxy's premier destination for planetary acquisition. Founded in 2387, we've been connecting cosmic explorers with their dream worlds for over 100 years.</p>
+                <p style="margin-bottom: 2rem;">Our mission is to make planetary ownership accessible to everyone, from individual space enthusiasts to large-scale terraforming corporations. We believe that everyone deserves their own piece of the cosmos.</p>
+                <p style="margin-bottom: 2rem;">With our advanced quantum delivery system and expert planetary curation team, we ensure that every planet in our collection meets the highest standards of quality and habitability.</p>
+                <p>Trust CosmicMart to help you find your perfect celestial home among the stars.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div style="padding: 5rem 0; max-width: 800px; margin: 0 auto; padding-left: 2rem; padding-right: 2rem;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #00d4ff;">Contact Us</h2>
+            <div style="background: rgba(255, 255, 255, 0.1); padding: 3rem; border-radius: 20px;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem;">🌌 Galactic Headquarters</p>
+                    <p>Asteroid Belt Station Alpha-7</p>
+                    <p>Sector 9, Milky Way Galaxy</p>
+                </div>
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem;">📡 Contact Information</p>
+                    <p>Quantum Comm: +1-COSMIC-MART</p>
+                    <p>Subspace Email: info@cosmicmart.galaxy</p>
+                    <p>Emergency Hotline: SOS-PLANET-HELP</p>
+                </div>
+                <div style="text-align: center;">
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem;">⏰ Operating Hours</p>
+                    <p>Galactic Standard Time: 24/7/365</p>
+                    <p>We're always here to help across all time zones!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" onclick="showSection('home')">Home</a></li>
+                        <li><a href="#" onclick="showSection('planets')">Planets</a></li>
+                        <li><a href="#" onclick="showSection('about')">About</a></li>
+                        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Planet Customization</a></li>
+                        <li><a href="#">Terraforming</a></li>
+                        <li><a href="#">Orbital Adjustments</a></li>
+                        <li><a href="#">Atmospheric Engineering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">SpaceBook</a></li>
+                        <li><a href="#">Insta-Galaxy</a></li>
+                        <li><a href="#">CosmicTweet</a></li>
+                        <li><a href="#">LinkedIn-Nebula</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2487 CosmicMart. All rights reserved across the galaxy. | Privacy Policy | Terms of Service | Galactic Commerce License #CM-2487-UNIV</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modalTitle">Purchase Planet</h2>
-            <div id="modalContent">
-                <p>Congratulations on your cosmic purchase!</p>
-                <p>Planet: <span id="modalPlanetName"></span></p>
-                <p>Price: <span id="modalPlanetPrice"></span></p>
-                <p>Thank you for choosing CosmicMart. Your planet ownership documents will be delivered via quantum mail.</p>
+            <h2 style="color: #00d4ff; margin-bottom: 1rem;">Planet Details</h2>
+            <div id="modal-body">
+                <!-- Planet details will be loaded here -->
             </div>
         </div>
     </div>
