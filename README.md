@@ -63,5 +63,7 @@ Inspired by modern e-commerce design patterns
 Planet data based on real exoplanet discoveries
 Icons and emojis from Unicode standard
 
+![Screenshot](Screenshot planets.png)
+
 # 📧 Contact
 Your Name - @prashuvishwakarma - prashuvish100@gmail.com
