@@ -425,5 +425,5 @@
 
         // Welcome message
         setTimeout(() => {
-            showNotification('Welcome to CosmicMart! 🌟 Discover your perfect planet today!');
+            showNotification('Welcome to CosmicMart! 🌟 Discover your perfect planet today');
         }, 1000);
